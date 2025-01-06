@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
+    <title>Личный почтовый ящик</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<main>
+    <div class="notification js-notification">
+        <p class="notification__text">Сообщение успешно отправлено!</p>
+    </div>
+    <div class="preloader">
+        <span></span>
+    </div>
+    <section class="auth disable">
+        <div class="auth__wrapper">
+
+            <p class="auth__title">Авторизация</p>
+            <div class="auth__input-wrapper">
+                <input class="auth__input" id="auth-email" type="text" maxlength="30" placeholder="">
+                <label for="auth-email" class="auth__input-title">Адрес эл. почты</label>
+            </div>
+            <div class="auth__input-wrapper">
+                <input class="auth__input" id="auth-password" type="password" autocomplete="off" maxlength="100"
+                       placeholder="">
+                <label for="auth-password" class="auth__input-title" autocomplete="off">Пароль</label>
+            </div>
+            <p class="auth__error-text js-error-text">Неправильный логин или пароль!</p>
+            <button class="auth__button js-auth-button hover-opacity">Вход</button>
+
+        </div>
+    </section>
+    <section class="main">
+        <div class="main__block letters-types">
+            <div class="container letter-types__container">
+                <div class="letter-types__user-info">
+                    <p class="letter-types__user-info-email">boyko.course.work@gmail.com</p>
+                    <img src="./images/logout.svg" class="hover-opacity js-logout letter-types__logout" alt="Logout icon">
+                </div>
+                <ul class="letters-types__list">
+                    <li class="letters-types__list-item active hover-opacity js-tab js-tab-incoming">
+                        <span>Входящие</span></li>
+                    <li class="letters-types__list-item hover-opacity js-tab js-tab-sent"><span>Отправленные</span></li>
+                    <li class="letters-types__list-item letters-types__list-item_write hover-opacity js-write-letter">
+                        <span>Написать письмо</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__block letters-list">
+            <div class="container letters-list__container">
+                <div class="letters-list__search">
+                    <input class="letters-list__search-input js-search-input" type="text" placeholder="Поиск сообщений..."
+                           maxlength="20">
+                    <button class="letters-list__search-button">
+                        <img src="images/search-icon.svg" alt="Иконка поиска">
+                    </button>
+                </div>
+                <h2 class="letters-list__title js-letters-list-title">Входящие</h2>
+                <p class="letters-list__not-found-text disable js-not-found-text">Ничего не найдено</p>
+                <p class="letters-list__statistic js-incoming-letters-list-statistic"><span class="js-letters-statistic-all">~</span> сообщений, <span
+                        class="js-letters-statistic-unread">~</span> непрочитанных</p>
+                <p class="letters-list__statistic disable js-sent-letters-list-statistic"><span class="js-sent-letters-statistic">~</span> сообщений</p>
+                <ul class="letters-list__content js-incoming-letters-list"></ul>
+                <ul class="letters-list__content disable js-sent-letters-list"></ul>
+            </div>
+        </div>
+        <div class="main__block letters-content">
+            <div class="letters-content-empty js-letter-content-empty">
+                <h2 class="letters-content-empty__title">Выберите элемент для чтения</h2>
+                <img class="letters-content-empty__img" src="images/letter-icon.svg"/>
+                <p class="letters-content-empty__text">Ничего не выбрано</p>
+            </div>
+            <div class="container letters-content__container disable js-opened-message-content">
+                <img class="letters-content__delete-button hover-opacity js-delete-button disable"
+                     src="images/delete-button.svg" alt="Кнопка удаления" data-message-id="0">
+                <div class="letters-content__opened-message opened-message"></div>
+            </div>
+        </div>
+    </section>
+</main>
+<div class="write-modal js-write-modal">
+    <div class="write-modal__wrapper">
+        <div class="preloader prealoder_small disable js-sent-message-preloader">
+            <span></span>
+        </div>
+        <p class="write-modal__title">Новое сообщение</p>
+        <p class="write-modal__close js-close hover-opacity">X</p>
+        <div class="write-modal__input-block">
+            <p class="write-modal__input-block-title">Кому: </p>
+            <input class="write-modal__input-block-input js-new-letter-recipient js-write-input" type="text" maxlength="40">
+        </div>
+        <div class="write-modal__input-block">
+            <p class="write-modal__input-block-title">Тема: </p>
+            <input class="write-modal__input-block-input js-new-letter-title js-write-input" type="text" maxlength="40">
+        </div>
+        <textarea class="write-modal__textarea js-new-letter-body js-write-input" maxlength="500"></textarea>
+        <p class="write-modal__error-text js-write-error disable">Ошибка отправки!</p>
+        <button class="write-modal__submit hover-opacity js-submit">Отправить</button>
+    </div>
+</div>
+<script type="module" src="js/main.js"></script>
+<script src="cpp/gmailApiInteraction.js"></script>
+</body>
+</html>
