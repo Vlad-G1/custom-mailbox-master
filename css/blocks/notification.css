@@ -1,0 +1,36 @@
+.notification {
+    background: #111111a3;
+    padding: 7px;
+    max-width: 310px;
+    width: 100%;
+    border-radius: 10px;
+    position: fixed;
+    color: #FFFFFF;
+    top: -33px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    transition: 0.1s linear;
+}
+
+.notification.active {
+    top: 0;
+}
+
+.notification__text {
+    position: relative;
+    padding-left: 24px;
+}
+
+.notification__text::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 13px;
+    height: 13px;
+    background: url('../../images/notification.svg') no-repeat center;
+}

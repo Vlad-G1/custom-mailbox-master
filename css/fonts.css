@@ -1,0 +1,34 @@
+/*SF Pro*/
+
+@font-face {
+    font-family: "SF Pro";
+    src: local("SF Pro"),
+    url("../fonts/SF Pro/SFProDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/SF Pro/SFProDisplay-Regular.woff") format("woff"),
+    url("../fonts/SF Pro/SFProDisplay-Regular.ttf") format("ttf"),
+    url("../fonts/SF Pro/SFProDisplay-Regular.eot") format("eot");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SFProDisplay";
+    src: local("SFProDisplay"),
+    url("../fonts/SF Pro/SFProDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/SF Pro/SFProDisplay-Medium.woff") format("woff"),
+    url("../fonts/SF Pro/SFProDisplay-Medium.ttf") format("ttf"),
+    url("../fonts/SF Pro/SFProDisplay-Medium.eot") format("eot");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SFProDisplay";
+    src: local("SFProDisplay"),
+    url("../fonts/SF Pro/SFProDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/SF Pro/SFProDisplay-Bold.woff") format("woff"),
+    url("../fonts/SF Pro/SFProDisplay-Bold.ttf") format("ttf"),
+    url("../fonts/SF Pro/SFProDisplay-Bold.eot") format("eot");
+    font-weight: 600;
+    font-style: normal;
+}

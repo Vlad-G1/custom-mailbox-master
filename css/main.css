@@ -1,0 +1,115 @@
+@import "fonts.css";
+@import "normalize.css";
+@import "blocks/auth.css";
+@import "blocks/preloader.css";
+@import "blocks/letters-types.css";
+@import "blocks/letters-list.css";
+@import "blocks/letters-content.css";
+@import "blocks/write-modal.css";
+@import "blocks/notification.css";
+
+* {
+    font-family: "SF Pro", "Arial", sans-serif;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1E1E1E;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    background: none;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+    line-height: 1;
+}
+
+input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+    line-height: 1;
+}
+
+input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+    line-height: 1;
+}
+
+input::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+    line-height: 1;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+    line-height: 1;
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+    line-height: 1;
+}
+
+input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+    line-height: 1;
+}
+
+input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.main {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main__block {
+    color: #FFFFFF;
+}
+
+.main__block:not(:last-child) {
+    border-right: 1px solid #000000;
+}
+
+.hover-opacity {
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+.hover-opacity:hover {
+    opacity: 0.6;
+}
+
+.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

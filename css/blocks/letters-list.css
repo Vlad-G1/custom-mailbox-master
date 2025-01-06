@@ -1,0 +1,189 @@
+.letters-list {
+    flex: 0 1 378px;
+    position: relative;
+}
+
+.letters-list__container {
+    padding: 14px 14px;
+}
+
+.letters-list__search {
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0.5px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 5px 10px 5px 0;
+    display: flex;
+    align-items: center;
+    max-width: 195px;
+    margin: 0 0 18px;
+}
+
+.letters-list__search-input {
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.letters-list__search-input::-webkit-input-placeholder {
+    font-size: 14px;
+}
+
+.letters-list__search-input::-moz-placeholder {
+    font-size: 14px;
+}
+
+.letters-list__search-input:-ms-input-placeholder {
+    font-size: 14px;
+}
+
+.letters-list__search-input::-ms-input-placeholder {
+    font-size: 14px;
+}
+
+.letters-list__search-input::placeholder {
+    font-size: 14px;
+}
+
+.letters-list__search-input::-webkit-input-placeholder {
+    font-size: 14px;
+}
+
+.letters-list__search-input::-moz-placeholder {
+    font-size: 14px;
+}
+
+.letters-list__search-input:-ms-input-placeholder {
+    font-size: 14px;
+}
+
+.letters-list__title {
+    color: rgba(255, 255, 255, 0.90);
+    font-size: 20px;
+    line-height: 16px;
+    margin-bottom: 8px;
+}
+
+.letters-list__statistic {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+}
+
+.letters-list__statistic.disable {
+    display: none;
+}
+
+.letters-list__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.letters-list__content.disable {
+    display: none;
+}
+
+.letters-list__content-item {
+    border-bottom: 1px solid rgba(217, 217, 217, 0.12);
+    max-width: 346px;
+    width: 100%;
+    padding-bottom: 10px;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.letters-list__content-item.disable {
+    display: none;
+}
+
+.letters-list__content-item.active {
+    background-color: #2761CA;
+    border-radius: 10px;
+}
+
+.letters-list__content-item.read {
+    opacity: 0.4;
+}
+
+.letters-list__content-item.unread {
+    font-weight: bold;
+}
+
+.letters-list__content-item.unread::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: -7px;
+    background-color: #2761CA;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+}
+
+.letters-list__content-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.letters-list__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.letters-list__head-name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    max-width: 190px;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.letters-list__head-time {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+    line-height: 11px;
+    max-width: 106px;
+    width: 100%;
+    text-align: right;
+}
+
+.letters-list__letter-title {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    line-height: 1;
+    margin: 11px 0 9px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 285px;
+    width: 100%;
+}
+
+.letters-list__body {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 13px;
+    line-height: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.letters-list__not-found-text {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+}
+
+.letters-list__not-found-text.disable {
+    display: none;
+}
